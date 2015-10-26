@@ -1,8 +1,5 @@
 require "sinatra"
 
-get "/" do
-  "Hello World"
-end
 
 
 get "/this" do
@@ -12,4 +9,8 @@ end
 
 get "/sinatra" do
 "Hello Sinatra"
+end
+
+get "/" do
+  File.read(File.join('public', 'hello.txt'))
 end
